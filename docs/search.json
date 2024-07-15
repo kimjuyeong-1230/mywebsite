@@ -19,5 +19,19 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n2"
+  },
+  {
+    "objectID": "hw.html",
+    "href": "hw.html",
+    "title": "hw1",
+    "section": "",
+    "text": "안녕하세요 데이터분석쥉입니다"
+  },
+  {
+    "objectID": "hw.html#홈페이지-첫-화면입니다",
+    "href": "hw.html#홈페이지-첫-화면입니다",
+    "title": "hw1",
+    "section": "",
+    "text": "안녕하세요 데이터분석쥉입니다"
   }
 ]
