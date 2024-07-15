@@ -3,6 +3,82 @@ title: "hw1"
 jupyter: python3
 ---
 
-## 홈페이지 첫 화면입니다!
+### 84pg. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.
 
-안녕하세요 데이터분석쥉입니다
+```{python}
+import pandas as pd
+df = pd.DataFrame({
+  '제품' : ['사과', '딸기', '수박'],
+                  '가격' : [1800, 1500, 3000],
+                  '판매량' : [24, 38, 13]
+                  })
+df
+```
+
+```{python}
+# 가격 평균
+sum(df['가격'])/3
+```
+
+```{python}
+# 판매량 평균
+sum(df['판매량'])/3
+
+```
+
+### 115pg. 데이터를 이용해 분석 문제를 해결해 보세요.
+```{python}
+# mpg 데이터 복사본 만들기
+mpg = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/Doit_Python/Data/mpg.csv")
+mpg_copy = mpg.copy()
+mpg_copy
+```
+
+```{python}
+# 복사본 데이터 이용해 cty는 city로, hwy는 highway로 수정
+mpg_copy = mpg_copy.rename(columns = {'cty' : 'city'})
+mpg_copy = mpg_copy.rename(columns = {'hwy' : 'highway'})
+#mpg_copy = mpg_copy.rename(columns={'cty': 'city', 'hwy': 'highway'}) 이렇게도 가능
+
+# 일부 출력하여 변수명 바뀌었는지 확인
+mpg_copy[:5]
+mpg_copy.head()
+```
+
+### 130pg. 미국 동북중부 437개 지역의 인구통계정보 데이터 활용
+```{python}
+# 데이터 불러오기
+midwest = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/Doit_Python/Data/midwest.csv")
+midwest
+```
+
+```{python}
+# poptotal변수를 total로, popasian변수를 asian으로 수정
+midwest = midwest.rename(columns={'poptotal': 'total', 'popasian': 'asian'})
+midwest.columns
+```
+
+```{python}
+# total, asian 변수를 이용해 '전체 인구 대비 아시아 인구 백분율' 파생변수를 추가하고, 히스토그램 만들기
+import matplotlib.pyplot as plt
+midwest['전체 인구 대비 아시아 인구 백분율'] = (midwest['asian'] / midwest['total']) * 100
+midwest['전체 인구 대비 아시아 인구 백분율'].plot.hist()
+plt.show()
+```
+
+```{python}
+# 아시아 인구 백분율 전체 평균을 구하고 평균을 초과하면 large, 그외에는 small 부여한 파생변수 만들기
+import numpy as np
+asian_percentage = midwest['전체 인구 대비 아시아 인구 백분율'].mean()
+midwest['group'] = np.where(midwest['전체 인구 대비 아시아 인구 백분율'] > asian_percentage, 'large', 'small')
+midwest
+```
+
+```{python}
+# 빈도 구하기
+count_test = midwest['group'].value_counts()
+count_test
+
+# 빈도 막대 그래프
+count_test.plot.bar(rot = 0)
+```
