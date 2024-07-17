@@ -1,0 +1,9 @@
+---
+title: "blog"
+jupyter: python3
+listing:
+  contents: posts
+  sort: "data desc"
+  type: default
+  categories: true
+---

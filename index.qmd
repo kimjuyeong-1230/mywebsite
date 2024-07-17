@@ -1,8 +1,20 @@
 ---
 title: "testwebsite"
 jupyter: python3
+toc: false
+about:
+  id: hero-heading
+  template: jolla
+  image: cat.jpg
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/
 ---
+
+
+:::{#hero-heading}
 
 ## 홈페이지 첫 화면입니다!
 
-안녕하세요 데이터분석쥉입니다
+안녕하세요 데이터분석입니다
