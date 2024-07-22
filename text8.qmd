@@ -1,0 +1,50 @@
+---
+title: "textbook8"
+format: html
+jupyter: python3
+---
+
+## 빈도 막대 그래프 만들기
+seaborn 패키지 불러오기
+```{python}
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+```
+
+### 데이터불러오기
+```{python}
+mpg = pd.read_csv("data/mpg.csv")
+mpg.shape
+```
+
+### 'barplot()' 사용하기
+```{python}
+sns.scatterplot(data= mpg, x = "displ", y="hwy", hue="drv") \
+              .set(xlim=[3,6], ylim=[10,30])
+plt.show()
+plt.clf()
+```
+
+### 'countplot()' 사용하기
+```{python}
+sns.countplot(data=mpg, x='drv')
+plt.show()
+```
+
+
+* plotly를 사용한 산점도
+```{python}
+import plotly.express as px
+
+sns.countplot(data=mpg, x='drv')
+px.scatter(data_frame=mpg, x="displ", y="hwy", color="drv")
+plt.show()
+```
+
+### 산점도 만들기
+```{python}
+import plotly.express as px
+
+px.scatter(data_frame=mpg, x='cty', y='hwy', color= 'drv')
+```
