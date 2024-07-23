@@ -10,6 +10,7 @@ seaborn 패키지 불러오기
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
+import plotly.express as px
 ```
 
 ### 데이터불러오기
@@ -46,5 +47,20 @@ plt.show()
 ```{python}
 import plotly.express as px
 
-px.scatter(data_frame=mpg, x='cty', y='hwy', color= 'drv')
+px.scatter(data_frame = mpg, x = 'cty', y = 'hwy', color= 'drv')
+plt.show()
+```
+
+### 막대그래프 만들기
+```{python}
+mpg = pd.read_csv("data/mpg.csv")
+# 자동차 종류별 빈도 구하기
+df = mpg.groupby('category', as_index = False) \
+        .agg(n=('category', 'count'))
+df
+```
+```{python}
+plt.clf()
+# 막대그래프
+px.bar(data_frame = df, x='category', y='n', color ='category').show()
 ```
