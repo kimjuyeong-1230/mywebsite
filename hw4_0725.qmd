@@ -30,20 +30,17 @@ y(x = x_values, mean=3, sigma=2)
 
 #### 1) P(X < 3)
 ```{python}
-x = norm.rvs(loc=2, scale=3, size=1000)
-sum(x < 3)/1000
+norm.cdf(3, loc=2, scale=3)
 ```
 
 #### 2) P(2 < X < 5)
 ```{python}
-x = norm.rvs(loc=2, scale=3, size=1000)
-sum((x > 2) & (x < 5))/1000
+norm.cdf(5, loc=2, scale=3) - norm.cdf(2, loc=2, scale=3)
 ```
 
 #### 3) P(X < 3 or X > 7)
 ```{python}
-x = norm.rvs(loc=2, scale=3, size=1000)
-sum((x < 3) | (x > 7))/1000
+norm.cdf(3, loc=2, scale=3) + (1 - norm.cdf(7, loc=2, scale=3))
 ```
 
 ## 3. LS빅데이터스쿨 학생들의 중간고사 점수는 평균:30, 분산:4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?
