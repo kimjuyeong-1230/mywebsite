@@ -8,7 +8,7 @@ jupyter: python3
 
 ```{python}
 import pandas as pd
-mpg = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/Doit_Python/Data/mpg.csv")
+mpg = pd.read_csv("data/mpg.csv")
 mpg
 ```
 

@@ -1,6 +1,13 @@
 ---
 title: "hw1"
-jupyter: python3
+author: "김주영"
+date: "2024-07-17"
+categories: [news]
+---
+
+This is the first post in a Quarto blog. Welcome!
+
+![](busan.jpg)
 ---
 
 ### 84pg. 다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요.
@@ -29,7 +36,7 @@ sum(df['판매량'])/3
 ### 115pg. 데이터를 이용해 분석 문제를 해결해 보세요.
 ```{python}
 # mpg 데이터 복사본 만들기
-mpg = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/Doit_Python/Data/mpg.csv")
+mpg = pd.read_csv("./data/mpg.csv")
 mpg_copy = mpg.copy()
 mpg_copy
 ```
@@ -48,7 +55,7 @@ mpg_copy.head()
 ### 130pg. 미국 동북중부 437개 지역의 인구통계정보 데이터 활용
 ```{python}
 # 데이터 불러오기
-midwest = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/Doit_Python/Data/midwest.csv")
+midwest = pd.read_csv("data/midwest.csv")
 midwest
 ```
 
