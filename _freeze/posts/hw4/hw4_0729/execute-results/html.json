@@ -1,0 +1,12 @@
+{
+  "hash": "8e92344292aa13ef83d9323325c9bb98",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"hw4\"\nformat: html\njupyter: python3\n---\n\n\n## 표본 분산 n-1 vs. n\n- 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.\n\n::: {#112b3ed3 .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom scipy.stats import uniform\nfrom scipy.stats import norm\n\nx = uniform.rvs(loc=3, scale=7, size = 20*10000).reshape(-1,20)\nx.mean()\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n6.50096241971596\n```\n:::\n:::\n\n\n### 1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요!(10000개 사용)\n\n::: {#8cdd3f11 .cell execution_count=2}\n``` {.python .cell-code}\ns_2 = x.var(axis = 1, ddof = 1)\ns_2\n\nsns.histplot(s_2)\nplt.show()\nplt.clf()\n```\n\n::: {.cell-output .cell-output-display}\n![](hw4_0729_files/figure-html/cell-3-output-1.png){width=593 height=411}\n:::\n\n::: {.cell-output .cell-output-display}\n```\n<Figure size 672x480 with 0 Axes>\n```\n:::\n:::\n\n\n::: {#06caf3cf .cell execution_count=3}\n``` {.python .cell-code}\nk_2 =  x.var(axis = 1, ddof = 0)\nk_2\n\nsns.histplot(k_2)\nplt.show()\nplt.clf()\n```\n\n::: {.cell-output .cell-output-display}\n![](hw4_0729_files/figure-html/cell-4-output-1.png){width=593 height=411}\n:::\n\n::: {.cell-output .cell-output-display}\n```\n<Figure size 672x480 with 0 Axes>\n```\n:::\n:::\n\n\n### 2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.\n\n::: {#5f1903c9 .cell execution_count=4}\n``` {.python .cell-code}\nsns.histplot(s_2)\nplt.axvline(x.var(), color=\"green\", linestyle=\"--\", linewidth=2)\nplt.show()\nplt.clf()\n```\n\n::: {.cell-output .cell-output-display}\n![](hw4_0729_files/figure-html/cell-5-output-1.png){width=593 height=411}\n:::\n\n::: {.cell-output .cell-output-display}\n```\n<Figure size 672x480 with 0 Axes>\n```\n:::\n:::\n\n\n::: {#3d202885 .cell execution_count=5}\n``` {.python .cell-code}\nsns.histplot(k_2)\nplt.axvline(x.var(), color=\"green\", linestyle=\"--\", linewidth=2)\nplt.show()\nplt.clf()\n```\n\n::: {.cell-output .cell-output-display}\n![](hw4_0729_files/figure-html/cell-6-output-1.png){width=593 height=411}\n:::\n\n::: {.cell-output .cell-output-display}\n```\n<Figure size 672x480 with 0 Axes>\n```\n:::\n:::\n\n\n### 3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!\n\n* n-1로 나누었을 때의 녹색막대(모분산 위치)가 더 그래프의 중심에 있기 때문이다.\n\n",
+    "supporting": [
+      "hw4_0729_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

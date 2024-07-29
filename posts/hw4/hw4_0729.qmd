@@ -1,0 +1,58 @@
+---
+title: "hw4"
+format: html
+jupyter: python3
+---
+
+## 표본 분산 n-1 vs. n
+- 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.
+```{python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import uniform
+from scipy.stats import norm
+
+x = uniform.rvs(loc=3, scale=7, size = 20*10000).reshape(-1,20)
+x.mean()
+```
+
+### 1. n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요!(10000개 사용)
+```{python}
+s_2 = x.var(axis = 1, ddof = 1)
+s_2
+
+sns.histplot(s_2)
+plt.show()
+plt.clf()
+```
+
+```{python}
+k_2 =  x.var(axis = 1, ddof = 0)
+k_2
+
+sns.histplot(k_2)
+plt.show()
+plt.clf()
+```
+
+### 2. 각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.
+```{python}
+sns.histplot(s_2)
+plt.axvline(x.var(), color="green", linestyle="--", linewidth=2)
+plt.show()
+plt.clf()
+```
+
+
+```{python}
+sns.histplot(k_2)
+plt.axvline(x.var(), color="green", linestyle="--", linewidth=2)
+plt.show()
+plt.clf()
+```
+
+### 3. 결과를 살펴보고, 왜 n-1로 나눈 것을 분산을 추정하는 지표로 사용하는 것이 타당한지 써주세요!
+
+* n-1로 나누었을 때의 녹색막대(모분산 위치)가 더 그래프의 중심에 있기 때문이다.
