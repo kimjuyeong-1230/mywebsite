@@ -1,0 +1,114 @@
+---
+title: "hw5"
+format: html
+jupyter: python3
+---
+
+```{python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns 
+```
+
+```{python}
+import pyreadstat
+```
+
+```{python}
+raw_welfare = pd.read_spss("C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/koweps/Koweps_hpwc14_2019_beta2.sav")
+raw_welfare 
+```
+
+```{python}
+welfare = raw_welfare.copy()
+welfare.shape
+```
+
+```{python}
+welfare = welfare.rename(
+  columns = {
+             'h14_g3' : 'sex',  #성별
+             'h14_g4' : 'birth',  # 태어난 연도 
+             'h14_g10' : 'marriage_type',  #혼인상태
+             'h14_g11' : 'religion',  # 종교
+             'p1402_8aq1' : 'income',  # 월급
+             'h14_eco9' : 'code_job',  # 직업코드
+             'h14_reg7' : 'code_region'  #지역코드
+})
+
+welfare = welfare[['sex', 'birth', 'marriage_type', 'religion','income', 'code_job','code_region']]
+welfare
+```
+
+```{python}
+welfare["sex"].dtypes
+welfare["sex"].value_counts()
+welfare["sex"].isna().sum()
+
+welfare["sex"] = np.where(welfare["sex"] == 1, 'male', 'female')
+welfare["sex"].value_counts()
+
+
+welfare["income"].describe()
+welfare["income"].isna().sum()
+
+sex_income = welfare.dropna(subset = "income") \
+       .groupby("sex", as_index= False) \
+       .agg(mean_income = ("income", "mean"))
+sex_income
+
+sns.barplot(data = sex_income, x = "sex", y="mean_income", hue="sex")
+plt.show()
+plt.clf()
+```
+
+## 표본분산, 표본평균, 표본크기
+```{python}
+sex_income = welfare.dropna(subset = "income") \
+       .groupby("sex", as_index= False) \
+       .agg(std_income = ("income", "std"),
+            mean_income = ("income", "mean"),
+            count_income = ("income", "count"))
+sex_income
+```
+
+
+## 신뢰구간
+
+```{python}
+from scipy.stats import norm
+z = norm.ppf(0.975)
+sex_income['ci_lower'] = sex_income["mean_income"] - z * (sex_income["std_income"] /  np.sqrt(sex_income['count_income']-1))
+
+sex_income['ci_upper'] = sex_income["mean_income"] + z * (sex_income["std_income"] /  np.sqrt(sex_income['count_income']-1))
+
+```
+
+## 시각화
+```{python}
+sns.barplot(data = sex_income, x = "sex", y="mean_income", hue="sex")
+plt.errorbar(x=sex_income['sex'], 
+             y=sex_income['mean_income'], 
+             yerr=[sex_income['mean_income'] - sex_income['ci_lower'],
+             sex_income['ci_upper'] - sex_income['mean_income']],
+             capsize=5, 
+             color='black',
+             label='Income',
+             fmt="none")
+plt.show()
+plt.clf()
+```
+
+```{python}
+import pyreadstat
+print(pyreadstat.__version__)
+
+```
+
+
+
+
+
+
+

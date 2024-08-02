@@ -175,7 +175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="071f48cb" class="cell" data-execution_count="1">
+<div id="b297cf68" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -185,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu3-sigma2의-pdf를-그릴것" class="level2">
 <h2 class="anchored" data-anchor-id="정규분포-pdf-값을-계산하는-자신만의-파이썬-함수를-정의하고-정규분포-mu3-sigma2의-pdf를-그릴것">1. 정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu=3, sigma=2의 pdf를 그릴것</h2>
-<div id="852dad5f" class="cell" data-execution_count="2">
+<div id="cfc799ae" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> y(x, mean, sigma):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> math.sqrt(<span class="dv">2</span> <span class="op">*</span> math.pi <span class="op">*</span> sigma<span class="op">**</span><span class="dv">2</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  b <span class="op">=</span> np.exp(<span class="op">-</span>(x<span class="op">-</span>mean)<span class="op">**</span><span class="dv">2</span><span class="op">/</span> sigma<span class="op">**</span><span class="dv">2</span>)</span>
@@ -211,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="px-3" class="level4">
 <h4 class="anchored" data-anchor-id="px-3">1) P(X &lt; 3)</h4>
-<div id="bee9d23f" class="cell" data-execution_count="3">
+<div id="f9abf9d6" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">3</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>0.6305586598182363</code></pre>
@@ -220,7 +220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="p2-x-5" class="level4">
 <h4 class="anchored" data-anchor-id="p2-x-5">2) P(2 &lt; X &lt; 5)</h4>
-<div id="e428f54a" class="cell" data-execution_count="4">
+<div id="cb576a54" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">5</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>) <span class="op">-</span> norm.cdf(<span class="dv">2</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>0.3413447460685429</code></pre>
@@ -229,7 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="px-3-or-x-7" class="level4">
 <h4 class="anchored" data-anchor-id="px-3-or-x-7">3) P(X &lt; 3 or X &gt; 7)</h4>
-<div id="b1eb9396" class="cell" data-execution_count="5">
+<div id="5d050cc3" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">3</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>) <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> norm.cdf(<span class="dv">7</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>0.678349012091051</code></pre>
@@ -239,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ls빅데이터스쿨-학생들의-중간고사-점수는-평균30-분산4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는" class="level2">
 <h2 class="anchored" data-anchor-id="ls빅데이터스쿨-학생들의-중간고사-점수는-평균30-분산4인-정규분포를-따른다.-상위-5에-해당하는-학생의-점수는">3. LS빅데이터스쿨 학생들의 중간고사 점수는 평균:30, 분산:4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?</h2>
-<div id="e5717f38" class="cell" data-execution_count="6">
+<div id="e6ff0bad" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#x = norm.rvs(loc=30, scale=2, size=100)</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#x.sort()</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#x[-5:]</span></span>

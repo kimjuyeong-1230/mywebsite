@@ -53,7 +53,7 @@
     "href": "blog.html",
     "title": "blog",
     "section": "",
-    "text": "hw1\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n김주영\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "hw1\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n김주영\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw2/hw2.html",
@@ -229,5 +229,33 @@
     "title": "hw4",
     "section": "3. LS빅데이터스쿨 학생들의 중간고사 점수는 평균:30, 분산:4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?",
     "text": "3. LS빅데이터스쿨 학생들의 중간고사 점수는 평균:30, 분산:4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?\n\n#x = norm.rvs(loc=30, scale=2, size=100)\n#x.sort()\n#x[-5:]\n\nx = norm.ppf(0.95, loc=30, scale=2)\nx\n\n33.28970725390295"
+  },
+  {
+    "objectID": "posts/hw5/hw5_0730.html",
+    "href": "posts/hw5/hw5_0730.html",
+    "title": "hw5",
+    "section": "",
+    "text": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport pyreadstat\nraw_welfare = pd.read_spss(\"C:/Users/USER/Documents/LS빅데이터스쿨/lsbigdata-project1/data/koweps/Koweps_hpwc14_2019_beta2.sav\")\nraw_welfare \n\n\n\n\n\n\n\n\nh14_id\nh14_ind\nh14_sn\nh14_merkey\nh_new\nh14_cobf\np14_wsc\np14_wsl\np14_wgc\np14_wgl\n...\nwc14_64\nwc14_65\nwc14_5aq4\nwc14_5aq5\nwc14_5aq6\nh14_pers_income1\nh14_pers_income2\nh14_pers_income3\nh14_pers_income4\nh14_pers_income5\n\n\n\n\n0\n2.0\n1.0\n1.0\n20101.0\n0.0\nNaN\n0.291589\n0.291589\n1307.764781\n1307.764781\n...\nNaN\n\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n0.0\nNaN\n\n\n1\n3.0\n1.0\n1.0\n30101.0\n0.0\nNaN\n0.419753\n0.419753\n1882.570960\n1882.570960\n...\nNaN\n\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n0.0\nNaN\n\n\n2\n4.0\n1.0\n1.0\n40101.0\n0.0\nNaN\n0.265263\n0.265980\n1189.691668\n1192.908537\n...\nNaN\n\nNaN\nNaN\nNaN\nNaN\n1284.0\nNaN\n0.0\nNaN\n\n\n3\n6.0\n1.0\n1.0\n60101.0\n0.0\nNaN\n0.494906\n0.495941\n2219.630833\n2224.273816\n...\n1.0\n.\n2.0\n4.0\n4.0\n2304.0\nNaN\n1800.0\n0.0\nNaN\n\n\n4\n6.0\n1.0\n1.0\n60101.0\n0.0\nNaN\n1.017935\n1.017935\n4565.389177\n4565.389177\n...\n1.0\n.\n1.0\n5.0\n2.0\nNaN\nNaN\nNaN\n0.0\nNaN\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n14413\n9800.0\n7.0\n1.0\n98000701.0\n1.0\nNaN\nNaN\nNaN\nNaN\nNaN\n...\nNaN\n\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n0.0\nNaN\n\n\n14414\n9800.0\n7.0\n1.0\n98000701.0\n1.0\nNaN\nNaN\nNaN\nNaN\nNaN\n...\nNaN\n\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n0.0\nNaN\n\n\n14415\n9800.0\n7.0\n1.0\n98000701.0\n1.0\nNaN\nNaN\nNaN\nNaN\nNaN\n...\nNaN\n\nNaN\nNaN\nNaN\nNaN\n208.0\nNaN\n0.0\nNaN\n\n\n14416\n9800.0\n7.0\n1.0\n98000701.0\n1.0\nNaN\nNaN\nNaN\nNaN\nNaN\n...\n5.0\n.\n4.0\n3.0\n3.0\nNaN\n1200.0\nNaN\n0.0\nNaN\n\n\n14417\n9800.0\n7.0\n1.0\n98000701.0\n1.0\nNaN\nNaN\nNaN\nNaN\nNaN\n...\nNaN\n\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n0.0\nNaN\n\n\n\n\n14418 rows × 830 columns\nwelfare = raw_welfare.copy()\nwelfare.shape\n\n(14418, 830)\nwelfare = welfare.rename(\n  columns = {\n             'h14_g3' : 'sex',  #성별\n             'h14_g4' : 'birth',  # 태어난 연도 \n             'h14_g10' : 'marriage_type',  #혼인상태\n             'h14_g11' : 'religion',  # 종교\n             'p1402_8aq1' : 'income',  # 월급\n             'h14_eco9' : 'code_job',  # 직업코드\n             'h14_reg7' : 'code_region'  #지역코드\n})\n\nwelfare = welfare[['sex', 'birth', 'marriage_type', 'religion','income', 'code_job','code_region']]\nwelfare\n\n\n\n\n\n\n\n\nsex\nbirth\nmarriage_type\nreligion\nincome\ncode_job\ncode_region\n\n\n\n\n0\n2.0\n1945.0\n2.0\n1.0\nNaN\nNaN\n1.0\n\n\n1\n1.0\n1948.0\n2.0\n2.0\nNaN\nNaN\n1.0\n\n\n2\n1.0\n1942.0\n3.0\n1.0\n107.0\n762.0\n1.0\n\n\n3\n1.0\n1962.0\n1.0\n1.0\n192.0\n855.0\n1.0\n\n\n4\n2.0\n1963.0\n1.0\n1.0\nNaN\nNaN\n1.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n14413\n2.0\n1967.0\n1.0\n1.0\nNaN\nNaN\n5.0\n\n\n14414\n2.0\n1992.0\n5.0\n1.0\nNaN\nNaN\n5.0\n\n\n14415\n1.0\n1995.0\n5.0\n1.0\nNaN\n910.0\n5.0\n\n\n14416\n2.0\n1998.0\n5.0\n1.0\n200.0\n246.0\n5.0\n\n\n14417\n1.0\n2001.0\n0.0\n1.0\nNaN\nNaN\n5.0\n\n\n\n\n14418 rows × 7 columns\nwelfare[\"sex\"].dtypes\nwelfare[\"sex\"].value_counts()\nwelfare[\"sex\"].isna().sum()\n\nwelfare[\"sex\"] = np.where(welfare[\"sex\"] == 1, 'male', 'female')\nwelfare[\"sex\"].value_counts()\n\n\nwelfare[\"income\"].describe()\nwelfare[\"income\"].isna().sum()\n\nsex_income = welfare.dropna(subset = \"income\") \\\n       .groupby(\"sex\", as_index= False) \\\n       .agg(mean_income = (\"income\", \"mean\"))\nsex_income\n\nsns.barplot(data = sex_income, x = \"sex\", y=\"mean_income\", hue=\"sex\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw5/hw5_0730.html#표본분산-표본평균-표본크기",
+    "href": "posts/hw5/hw5_0730.html#표본분산-표본평균-표본크기",
+    "title": "hw5",
+    "section": "표본분산, 표본평균, 표본크기",
+    "text": "표본분산, 표본평균, 표본크기\n\nsex_income = welfare.dropna(subset = \"income\") \\\n       .groupby(\"sex\", as_index= False) \\\n       .agg(std_income = (\"income\", \"std\"),\n            mean_income = (\"income\", \"mean\"),\n            count_income = (\"income\", \"count\"))\nsex_income\n\n\n\n\n\n\n\n\nsex\nstd_income\nmean_income\ncount_income\n\n\n\n\n0\nfemale\n132.057402\n186.293096\n2245\n\n\n1\nmale\n217.862254\n349.037571\n2289"
+  },
+  {
+    "objectID": "posts/hw5/hw5_0730.html#신뢰구간",
+    "href": "posts/hw5/hw5_0730.html#신뢰구간",
+    "title": "hw5",
+    "section": "신뢰구간",
+    "text": "신뢰구간\n\nfrom scipy.stats import norm\nz = norm.ppf(0.975)\nsex_income['ci_lower'] = sex_income[\"mean_income\"] - z * (sex_income[\"std_income\"] /  np.sqrt(sex_income['count_income']-1))\n\nsex_income['ci_upper'] = sex_income[\"mean_income\"] + z * (sex_income[\"std_income\"] /  np.sqrt(sex_income['count_income']-1))"
+  },
+  {
+    "objectID": "posts/hw5/hw5_0730.html#시각화",
+    "href": "posts/hw5/hw5_0730.html#시각화",
+    "title": "hw5",
+    "section": "시각화",
+    "text": "시각화\n\nsns.barplot(data = sex_income, x = \"sex\", y=\"mean_income\", hue=\"sex\")\nplt.errorbar(x=sex_income['sex'], \n             y=sex_income['mean_income'], \n             yerr=[sex_income['mean_income'] - sex_income['ci_lower'],\n             sex_income['ci_upper'] - sex_income['mean_income']],\n             capsize=5, \n             color='black',\n             label='Income',\n             fmt=\"none\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n\nimport pyreadstat\nprint(pyreadstat.__version__)\n\n1.2.7"
   }
 ]
