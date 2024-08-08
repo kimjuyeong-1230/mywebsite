@@ -53,7 +53,7 @@
     "href": "blog.html",
     "title": "blog",
     "section": "",
-    "text": "hw1\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n김주영\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "hw1\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 17, 2024\n\n\n김주영\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecent posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw2/hw2.html",
@@ -271,5 +271,12 @@
     "title": "hw6",
     "section": "",
     "text": "신형 자동차의 에너지 소비효율 등급\n\n슬통 자동차는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여한다고 한다. 표본에 의하여 판단해볼 때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오(유의수준 1%로 설정)\n\n\n검정을 위한 가설을 명확하게 서술하시오 ** HO: mu &gt;= 16 ** HA: mu &lt; 16\n\n검정통계량 계산하시오\n\n\nimport numpy as np\nfrom scipy.stats import norm\n\nx = np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\n\nx_mean = x.mean()\nx_std = np.std(x, ddof=1)\n\n# t-검정 통계량 계산\nt_value = (x_mean - 16) / (x_std / np.sqrt(len(x)))\nt_value\n\n-1.8500447456376756\n\n\n\n\np-value를 구하세요\n\n\n\nfrom scipy.stats import t\np_value = t.cdf(t_value , df = 14)  #df=15-1\np_value\n\n0.042762417664207845\n\n\n\n\n현대자동차의 신형모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간을 구해보세요.\n\n\n\nz = t.ppf(0.975, df=14)\nci_lower = x_mean - z * (x_std /  np.sqrt(15))\nci_upper = x_mean + z * (x_std /  np.sqrt(15))\n\nprint(ci_lower, ci_upper)\n\n14.988864240339733 16.074602426326933"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Recent posts",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\nhw5\n\n\n\n\n\n\n\n\n\n\n\nhw6\n\n\n\n\n\n\n\n\n\n\n\nhw1\n\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
