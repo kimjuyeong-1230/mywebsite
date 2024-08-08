@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -128,7 +128,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -200,107 +199,93 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1721195368040" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
-<div class="thumbnail">
-<p><a href="./posts/hw1/index.html" class="no-external"></a></p><a href="./posts/hw1/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw1\busan.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw1/index.html" class="no-external">hw1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw1/index.html" class="no-external"></a>
-</div>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="news" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1721195368040" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
+<a href="./posts/hw1/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw1\busan.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+hw1
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<div class="listing-description">
-<a href="./posts/hw1/index.html" class="no-external">This is the first post in a Quarto blog. Welcome!</a>
+<div class="card-text listing-description">
+This is the first post in a Quarto blog. Welcome!
 </div>
-</div>
-<div class="metadata">
-<a href="./posts/hw1/index.html" class="no-external">
-<div class="listing-date">
-Jul 17, 2024
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 김주영
 </div>
+<div class="listing-date">
+Jul 17, 2024
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1721195348647" data-listing-reading-time-sort="2" data-listing-word-count-sort="258">
+<a href="./posts/hw2/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+hw2
+</h5>
+<div class="card-text listing-description">
+234 rows × 11 columns
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1721195348647" data-listing-reading-time-sort="2" data-listing-word-count-sort="258">
-<div class="thumbnail">
-<p><a href="./posts/hw2/index.html" class="no-external"></a></p><a href="./posts/hw2/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/hw2/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw2/index.html" class="no-external">hw2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw2/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/hw2/index.html" class="no-external">234 rows × 11 columns</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="./posts/hw2/index.html" class="no-external"></a></p><a href="./posts/hw2/index.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1721950148332" data-listing-reading-time-sort="1" data-listing-word-count-sort="123">
-<div class="thumbnail">
-<p><a href="./posts/hw3/hw3_0725.html" class="no-external"></a></p><a href="./posts/hw3/hw3_0725.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw3\hw3_0725_files\figure-html\cell-3-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw3/hw3_0725.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw3/hw3_0725.html" class="no-external">hw4</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw3/hw3_0725.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/hw3/hw3_0725.html" class="no-external">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1721950148332" data-listing-reading-time-sort="1" data-listing-word-count-sort="123">
+<a href="./posts/hw3/hw3_0725.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw3\hw3_0725_files\figure-html\cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+hw4
+</h5>
+<div class="card-text listing-description">
+
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb1-4"><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb1-5"><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-6"><span class="im">import</span> math</span></code></pre></div>
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="metadata">
-<p><a href="./posts/hw3/hw3_0725.html" class="no-external"></a></p><a href="./posts/hw3/hw3_0725.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1722263682616" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
-<div class="thumbnail">
-<p><a href="./posts/hw4/hw4_0729.html" class="no-external"></a></p><a href="./posts/hw4/hw4_0729.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw4\hw4_0729_files\figure-html\cell-3-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw4/hw4_0729.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw4/hw4_0729.html" class="no-external">hw4</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw4/hw4_0729.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/hw4/hw4_0729.html" class="no-external">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1722263682616" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
+<a href="./posts/hw4/hw4_0729.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw4\hw4_0729_files\figure-html\cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+hw4
+</h5>
+<div class="card-text listing-description">
+
 
 <ul>
 <li>균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.</li>
@@ -310,51 +295,47 @@ Jul 17, 2024
 <span id="cb1-2"><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-4"><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-5"><span class="im">from</span> scipy.stats <span class="im">import</span> unif…</span><span id="cb1-6"><span class="im"></span><span class="im"></span></span><span id="cb1-7"></span><span id="cb1-8"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="dv"></span></span><span id="cb1-9"></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="1"><pre><code></code></pre></div></div><section id="n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요10000개-사용" class="level3"><div id="8cdd3f11" class="cell" data-execution_count="2"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb3-2"></span><span id="cb3-3"></span><span id="cb3-4"></span><span id="cb3-5"></span><span id="cb3-6"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div><div id="06caf3cf" class="cell" data-execution_count="3"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb5-2"></span><span id="cb5-3"></span><span id="cb5-4"></span><span id="cb5-5"></span><span id="cb5-6"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div></section><section id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." class="level3"><div id="5f1903c9" class="cell" data-execution_count="4"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"></span><span id="cb7-2"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb7-3"></span><span id="cb7-4"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div><div id="3d202885" class="cell" data-execution_count="5"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"></span><span id="cb9-2"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb9-3"></span><span id="cb9-4"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div></section><section id="결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요" class="level3"><ul><li></li></ul></section></a>
+<span id="cb1-5"><span class="im">from</span> scipy.stats <span class="im">import</span> unif…</span><span id="cb1-6"><span class="im"></span><span class="im"></span></span><span id="cb1-7"></span><span id="cb1-8"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span><span class="dv"></span></span><span id="cb1-9"></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="1"><pre><code></code></pre></div></div><section id="n-1로-나눈-것을-s_2-n으로-나눈-것을-k_2로-정의하고-s_2의-분포와-k_2의-분포를-그려주세요10000개-사용" class="level3"><div id="8cdd3f11" class="cell" data-execution_count="2"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb3-2"></span><span id="cb3-3"></span><span id="cb3-4"></span><span id="cb3-5"></span><span id="cb3-6"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div><div id="06caf3cf" class="cell" data-execution_count="3"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="dv"></span></span><span id="cb5-2"></span><span id="cb5-3"></span><span id="cb5-4"></span><span id="cb5-5"></span><span id="cb5-6"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div></section><section id="각-분포-그래프에-모분산의-위치에-녹색-막대를-그려주세요." class="level3"><div id="5f1903c9" class="cell" data-execution_count="4"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"></span><span id="cb7-2"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb7-3"></span><span id="cb7-4"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div><div id="3d202885" class="cell" data-execution_count="5"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"></span><span id="cb9-2"><span class="op"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="op"></span><span class="dv"></span></span><span id="cb9-3"></span><span id="cb9-4"></span></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div><div class="cell-output cell-output-display"><pre><code></code></pre></div></div></section><section id="결과를-살펴보고-왜-n-1로-나눈-것을-분산을-추정하는-지표로-사용하는-것이-타당한지-써주세요" class="level3"><ul><li></li></ul></section>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="./posts/hw4/hw4_0729.html" class="no-external"></a></p><a href="./posts/hw4/hw4_0729.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1722565296657" data-listing-reading-time-sort="2" data-listing-word-count-sort="381">
+<a href="./posts/hw5/hw5_0730.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw5\hw5_0730_files\figure-html\cell-7-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+hw5
+</h5>
+<div class="card-text listing-description">
+14418 rows × 830 columns
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1722565296657" data-listing-reading-time-sort="2" data-listing-word-count-sort="381">
-<div class="thumbnail">
-<p><a href="./posts/hw5/hw5_0730.html" class="no-external"></a></p><a href="./posts/hw5/hw5_0730.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw5\hw5_0730_files\figure-html\cell-7-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw5/hw5_0730.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw5/hw5_0730.html" class="no-external">hw5</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw5/hw5_0730.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/hw5/hw5_0730.html" class="no-external">14418 rows × 830 columns</a>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="./posts/hw5/hw5_0730.html" class="no-external"></a></p><a href="./posts/hw5/hw5_0730.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1722872361639" data-listing-reading-time-sort="1" data-listing-word-count-sort="159">
-<div class="thumbnail">
-<p><a href="./posts/hw6/hw6.html" class="no-external"></a></p><a href="./posts/hw6/hw6.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/hw6/hw6.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw6/hw6.html" class="no-external">hw6</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw6/hw6.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/hw6/hw6.html" class="no-external">
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1722872361639" data-listing-reading-time-sort="1" data-listing-word-count-sort="159">
+<a href="./posts/hw6/hw6.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+hw6
+</h5>
+<div class="card-text listing-description">
+
 
 <section id="슬통-자동차는-매해-출시되는-신형-자동차의-에너지-소비효율-등급을-1등급으로-유지하고-있다.-22년-개발된-신형-모델이-한국-자동차-평가원에서-설정한-에너지-소비-효율등급-1등급을-받을-수-있을지-검정하려한다.-평가원에-따르면-1등급의-기준은-평균-복합-에너지-소비효율이-16.0-이상인-경우-부여한다고-한다.-표본에-의하여-판단해볼-때-현대자동차의-신형-모델은-에너지-효율-1등급으로-판단할-수-있을지-판단해보시오유의수준-1로-설정" class="level6">
 
@@ -368,29 +349,27 @@ Jul 17, 2024
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb1-3"></span>
-<span id="cb1-4">x <span class="op">=</span> np.array([<span class="fl">15.078</span>, <span class="fl">15.752</span>, <span class="fl">15.549</span>, <span class="fl">15.56</span>, <span class="fl">16.098</span>…<span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span></span><span id="cb1-5"></span><span id="cb1-6"><span class="op"></span></span><span id="cb1-7"><span class="op"></span><span class="op"></span><span class="dv"></span></span><span id="cb1-8"></span><span id="cb1-9"><span class="co"></span></span><span id="cb1-10"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="op"></span><span class="bu"></span></span><span id="cb1-11"></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="1"><pre><code></code></pre></div></div><ul><li><ol start="2" type="1"><li></li></ol></li></ul><div id="ded43d9e" class="cell" data-execution_count="2"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im"></span><span class="im"></span></span><span id="cb3-2"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="co"></span></span><span id="cb3-3"></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="2"><pre><code></code></pre></div></div><ul><li><ol start="3" type="1"><li></li></ol></li></ul><div id="7ad2bbf2" class="cell" data-execution_count="3"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="op"></span><span class="fl"></span><span class="op"></span><span class="dv"></span></span><span id="cb5-2"><span class="op"></span><span class="op"></span><span class="op"></span><span class="op"></span><span class="dv"></span></span><span id="cb5-3"><span class="op"></span><span class="op"></span><span class="op"></span><span class="op"></span><span class="dv"></span></span><span id="cb5-4"></span><span id="cb5-5"><span class="bu"></span></span></code></pre></div><div class="cell-output cell-output-stdout"><pre><code></code></pre></div></div></section></a>
+<span id="cb1-4">x <span class="op">=</span> np.array([<span class="fl">15.078</span>, <span class="fl">15.752</span>, <span class="fl">15.549</span>, <span class="fl">15.56</span>, <span class="fl">16.098</span>…<span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span><span class="fl"></span></span><span id="cb1-5"></span><span id="cb1-6"><span class="op"></span></span><span id="cb1-7"><span class="op"></span><span class="op"></span><span class="dv"></span></span><span id="cb1-8"></span><span id="cb1-9"><span class="co"></span></span><span id="cb1-10"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="op"></span><span class="op"></span><span class="bu"></span></span><span id="cb1-11"></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="1"><pre><code></code></pre></div></div><ul><li><ol start="2" type="1"><li></li></ol></li></ul><div id="ded43d9e" class="cell" data-execution_count="2"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im"></span><span class="im"></span></span><span id="cb3-2"><span class="op"></span><span class="op"></span><span class="dv"></span><span class="co"></span></span><span id="cb3-3"></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="2"><pre><code></code></pre></div></div><ul><li><ol start="3" type="1"><li></li></ol></li></ul><div id="7ad2bbf2" class="cell" data-execution_count="3"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="op"></span><span class="fl"></span><span class="op"></span><span class="dv"></span></span><span id="cb5-2"><span class="op"></span><span class="op"></span><span class="op"></span><span class="op"></span><span class="dv"></span></span><span id="cb5-3"><span class="op"></span><span class="op"></span><span class="op"></span><span class="op"></span><span class="dv"></span></span><span id="cb5-4"></span><span id="cb5-5"><span class="bu"></span></span></code></pre></div><div class="cell-output cell-output-stdout"><pre><code></code></pre></div></div></section>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="./posts/hw6/hw6.html" class="no-external"></a></p><a href="./posts/hw6/hw6.html" class="no-external">
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1723077510407" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/index.html" class="no-external"></a></p><a href="./posts/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/index.html" class="no-external">Recent posts</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/index.html" class="no-external">
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1723077510407" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="./posts/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw3\hw3_0725_files\figure-html\cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Recent posts
+</h5>
+<div class="card-text listing-description">
+
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -406,13 +385,16 @@ Jul 17, 2024
          <option value="listing-date-sort" data-direction="desc">
           Date - Newest
         </option>
-     </select>…</div><div class="input-group input-group-sm quarto-listing-filter"><span class="input-group-text"><i class="bi bi-search"></i></span><input type="text" class="search form-control" placeholder="Filter"></div></div><div class="list grid quarto-listing-cols-3"><div class="g-col-1" data-index="0" data-listing-file-modified-sort="1721195348647" data-listing-reading-time-sort="2" data-listing-word-count-sort="258"><div class="quarto-grid-item card h-100 card-left"><div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="1" data-listing-file-modified-sort="1721950148332" data-listing-reading-time-sort="1" data-listing-word-count-sort="123"><div class="quarto-grid-item card h-100 card-left"><p class="card-img-top"><img src="posts\hw3\hw3_0725_files\figure-html\cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="2" data-listing-file-modified-sort="1722263682616" data-listing-reading-time-sort="1" data-listing-word-count-sort="105"><div class="quarto-grid-item card h-100 card-left"><p class="card-img-top"><img src="posts\hw4\hw4_0729_files\figure-html\cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="3" data-listing-file-modified-sort="1722565296657" data-listing-reading-time-sort="2" data-listing-word-count-sort="381"><div class="quarto-grid-item card h-100 card-left"><p class="card-img-top"><img src="posts\hw5\hw5_0730_files\figure-html\cell-7-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="4" data-listing-file-modified-sort="1722872361639" data-listing-reading-time-sort="1" data-listing-word-count-sort="159"><div class="quarto-grid-item card h-100 card-left"><div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="5" data-categories="news" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1721195368040" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242"><div class="quarto-grid-item card h-100 card-left"><p class="card-img-top"><img src="posts\hw1\busan.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p><div class="card-body post-contents"><div class="card-attribution card-text-small end"><div class="listing-date"></div></div></div></div></div></div><div class="listing-no-matching d-none"></div></a>
+     </select>…</div><div class="input-group input-group-sm quarto-listing-filter"><span class="input-group-text"><i class="bi bi-search"></i></span><input type="text" class="search form-control" placeholder="Filter"></div></div><div class="list grid quarto-listing-cols-3"><div class="g-col-1" data-index="0" data-listing-file-modified-sort="1721195348647" data-listing-reading-time-sort="2" data-listing-word-count-sort="258"><div class="quarto-grid-item card h-100 card-left"><div class="listing-item-img-placeholder card-img-top" style="height: 150px;"></div><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="1" data-listing-file-modified-sort="1721950148332" data-listing-reading-time-sort="1" data-listing-word-count-sort="123"><div class="quarto-grid-item card h-100 card-left"><p class="card-img-top"></p><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="2" data-listing-file-modified-sort="1722263682616" data-listing-reading-time-sort="1" data-listing-word-count-sort="105"><div class="quarto-grid-item card h-100 card-left"><p class="card-img-top"></p><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="3" data-listing-file-modified-sort="1722565296657" data-listing-reading-time-sort="2" data-listing-word-count-sort="381"><div class="quarto-grid-item card h-100 card-left"><p class="card-img-top"></p><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="4" data-listing-file-modified-sort="1722872361639" data-listing-reading-time-sort="1" data-listing-word-count-sort="159"><div class="quarto-grid-item card h-100 card-left"><div class="listing-item-img-placeholder card-img-top" style="height: 150px;"></div><div class="card-body post-contents"></div></div></div><div class="g-col-1" data-index="5" data-categories="news" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1721195368040" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="242"><div class="quarto-grid-item card h-100 card-left"><p class="card-img-top"></p><div class="card-body post-contents"><div class="card-attribution card-text-small end"><div class="listing-date"></div></div></div></div></div></div><div class="listing-no-matching d-none"></div>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
 </div>
 </div>
-<div class="metadata">
-<p><a href="./posts/index.html" class="no-external"></a></p><a href="./posts/index.html" class="no-external">
+</div>
+</div>
 </a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">

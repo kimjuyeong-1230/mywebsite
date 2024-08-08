@@ -4,6 +4,6 @@ jupyter: python3
 listing:
   contents: posts
   sort: "data desc"
-  type: default
+  type: grid
   categories: true
 ---
