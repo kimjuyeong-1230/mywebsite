@@ -53,7 +53,7 @@
     "href": "blog.html",
     "title": "blog",
     "section": "",
-    "text": "hw1\n\n\n\nnews\n\n\n\n\n\n\n\n김주영\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecent posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "hw1\n\n\n\nnews\n\n\n\n\n\n\n\n김주영\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhw7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecent posts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw2/hw2.html",
@@ -277,6 +277,27 @@
     "href": "posts/index.html",
     "title": "Recent posts",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\nhw5\n\n\n\n\n\n\n\n\n\n\n\nhw6\n\n\n\n\n\n\n\n\n\n\n\nhw1\n\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nhw2\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\nhw4\n\n\n\n\n\n\n\n\n\n\n\nhw5\n\n\n\n\n\n\n\n\n\n\n\nhw6\n\n\n\n\n\n\n\n\n\n\n\nhw7\n\n\n\n\n\n\n\n\n\n\n\nhw1\n\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/hw7/hw7.html",
+    "href": "posts/hw7/hw7.html",
+    "title": "hw7",
+    "section": "",
+    "text": "import numpy as np \nimport pandas as pd \nimport matplotlib.pyplot as plt\nfrom scipy.stats import norm"
+  },
+  {
+    "objectID": "posts/hw7/hw7.html#covid-19-발병률",
+    "href": "posts/hw7/hw7.html#covid-19-발병률",
+    "title": "hw7",
+    "section": "Covid 19 발병률",
+    "text": "Covid 19 발병률"
+  },
+  {
+    "objectID": "posts/hw7/hw7.html#카이제곱분포와-표본분",
+    "href": "posts/hw7/hw7.html#카이제곱분포와-표본분",
+    "title": "hw7",
+    "section": "카이제곱분포와 표본분",
+    "text": "카이제곱분포와 표본분"
   }
 ]
