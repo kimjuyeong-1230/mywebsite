@@ -1,0 +1,126 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"hw8\"\n",
+        "format: html\n",
+        "jupyter: python3\n",
+        "---"
+      ],
+      "id": "bbc11b28"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import numpy as np \n",
+        "import pandas as pd\n",
+        "from scipy.stats import chi2\n",
+        "import statsmodels.api as sm\n",
+        "from scipy.stats import norm\n",
+        "from sklearn.metrics import confusion_matrix"
+      ],
+      "id": "d172b21a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#종속변수: 백혈병 세포 관측 불가 여부 (REMISS), 1이면 관측 안됨을 의미\n",
+        "#독립변수:\n",
+        "#골수의 세포성 (CELL)\n",
+        "#골수편의 백혈구 비율 (SMEAR)\n",
+        "#골수의 백혈병 세포 침투 비율 (INFIL)\n",
+        "#골수 백혈병 세포의 라벨링 인덱스 (LI)\n",
+        "#말초혈액의 백혈병 세포 수 (BLAST)\n",
+        "#치료 시작 전 최고 체온 (TEMP)"
+      ],
+      "id": "26d3bf17",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 문제 1. 데이터를 로드하고, 로지스틱 회귀모델을 적합하고, 회귀 표를 작성하세요."
+      ],
+      "id": "050179da"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# 데이터로드\n",
+        "data=  pd.read_table('C:/Users/USER/Documents/LS빅데이터스쿨/LSbigdata-project1/data/leukemia_remission.txt', delimiter='\\t')\n",
+        "data "
+      ],
+      "id": "246778d4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# 로지스틱 회귀 모델 적합\n",
+        "X = data[['CELL', 'SMEAR', 'INFIL', 'LI', 'BLAST', 'TEMP']]  # 독립 변수\n",
+        "y = data['REMISS']  # 종속 변수 \n",
+        "\n",
+        "X = sm.add_constant(X)\n",
+        "\n",
+        "model = sm.Logit(y, X)\n",
+        "result = model.fit()\n",
+        "\n",
+        "# 회귀표 \n",
+        "print(result.summary())"
+      ],
+      "id": "fd66c95f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "##문제 2. 해당 모델은 통계적으로 유의한가요? 그 이유를 검정통계량를 사용해서 설명하시오.(유의기준 : 0.2)"
+      ],
+      "id": "b7c49949"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# 회귀표 \n",
+        "stat_vaule = -2*(-17.186 + 10.797)\n",
+        "1-chi2.cdf(stat_vaule, df = 6)"
+      ],
+      "id": "211514f6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "* 0.04669995098322843, p-value가 유의수준 0.2보다 작기 때문에 유의하다.\n"
+      ],
+      "id": "e9fad6e4"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\USER\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
